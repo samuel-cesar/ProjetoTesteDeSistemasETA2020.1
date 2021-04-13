@@ -14,7 +14,7 @@ public class SearchPage {
     private DSL dsl;
 
     public SearchPage() {
-        dsl = new DSL();
+        this.dsl = new DSL();
     }
 
     public void clicarCampoSearch() {
@@ -24,27 +24,14 @@ public class SearchPage {
     }
 
     public void escreverNoCampoSearch(String shoes) {
-        dsl.escrever("VisualSearchInput", shoes);
+        dsl.escreverApertarEnter("VisualSearchInput", shoes);
     }
 
     public String verificacaoNikePhantomGTAcademy3DMG() {
 
-        By nikePhantom3dMG = By.xpath("//*[@id='VisualSearchProduct-0']/figcaption/h4");
-        getDriverWait().until(ExpectedConditions.visibilityOfElementLocated(nikePhantom3dMG));
-        return getDriver().findElement(By.xpath("//*[@id='VisualSearchProduct-0']/figcaption/h4")).getText();
-    }
-
-    public String verificacaoNikePhantomGTAcademy3DMGPreco() {
-        return getDriver().findElement(By.xpath("//*[@id='VisualSearchProduct-0']/figcaption/p[2]")).getText();
-    }
-
-    public String verificacaoNikePremierIIFG() {
-        By nikeIIFG = By.xpath("//h4[contains(text(),'Nike Premier II FG')]");
-        getDriverWait().until(ExpectedConditions.visibilityOfElementLocated(nikeIIFG));
-        return getDriver().findElement(By.xpath("//h4[contains(text(),'Nike Premier II FG')]")).getText();
-    }
-
-    public String verificacaoNikePremierIIFGPreco() {
-        return getDriver().findElement(By.xpath("//p[contains(text(),'$110')]")).getText();
+        By nikePhantom3DMG = By.xpath("//span[contains(text(),'Nike Phantom GT Academy 3D MG')]");
+        getDriverWait().until(ExpectedConditions.visibilityOfElementLocated(nikePhantom3DMG));
+//        return getDriver().findElement(nikePhantom3DMG).getText();
+        return dsl.obterTexto(nikePhantom3DMG);
     }
 }

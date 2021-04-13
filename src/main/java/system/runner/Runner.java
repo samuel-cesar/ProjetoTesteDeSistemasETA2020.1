@@ -7,11 +7,13 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = "src/main/java/system/features",
-        glue = "system/stepDefinitions",
-        tags = "@Search",
         monochrome = false,
+        tags = "@ValidacaoCamposObrigatorios",
+        glue = "system/stepDefinitions",
+        dryRun = false,
         plugin = "pretty",
-        snippets = CucumberOptions.SnippetType.CAMELCASE
+        snippets = CucumberOptions.SnippetType.CAMELCASE,
+        publish = true
 )
 
 public class Runner {

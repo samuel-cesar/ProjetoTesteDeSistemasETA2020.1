@@ -2,9 +2,9 @@ package system.helpers;
 
 import static system.helpers.DriverManager.getDriver;
 
-public class AccessAplication {
+public class AccessNike {
 
-    public static void accessAplication() {
+    public static void accessNike() {
         getDriver().get("https://www.nike.com/");
     }
 }

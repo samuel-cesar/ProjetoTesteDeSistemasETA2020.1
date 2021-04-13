@@ -17,17 +17,13 @@ public class SearchSteps {
         searchPage.clicarCampoSearch();
     }
 
-    @When("o usuario digita {string} no campo de pesquisa")
-    public void oUsuarioDigitaNoCampoDePesquisa(String shoes) {
+    @When("o usuario digita {string} no campo de pesquisa e aperta a tecla enter")
+    public void oUsuarioDigitaNoCampoDePesquisaEApertaATeclaEnter(String shoes) {
         searchPage.escreverNoCampoSearch(shoes);
     }
 
-    @Then("o sistema deve exibir as seguintes chuteiras com seus respectivos precos:")
-    public void oSistemaDeveExibirAsSeguintesChuteirasComSeusRespectivosPrecos(DataTable chuteiras) {
-
-        assertEquals(chuteiras.cell(0, 0), searchPage.verificacaoNikePhantomGTAcademy3DMG());
-        assertEquals(chuteiras.cell(0, 1), searchPage.verificacaoNikePhantomGTAcademy3DMGPreco());
-        assertEquals(chuteiras.cell(1, 0), searchPage.verificacaoNikePremierIIFG());
-        assertEquals(chuteiras.cell(1, 1), searchPage.verificacaoNikePremierIIFGPreco());
+    @Then("o sistema deve exibir que o resultado da consulta foi:")
+    public void oSistemaDeveExibirQueOResultadoDaConsultaFoi(DataTable result) {
+        assertEquals(result.cell(0, 0), searchPage.verificacaoNikePhantomGTAcademy3DMG());
     }
 }
