@@ -1,8 +1,14 @@
 C:\DESENVOLVIMENTO\JAVA\INTELLIJ_IDEA\ProjetoTesteDeSistemasETA2020.1\src\main\java\system\helpers\DSL.java
-C:\DESENVOLVIMENTO\JAVA\INTELLIJ_IDEA\ProjetoTesteDeSistemasETA2020.1\src\main\java\system\stepDefinitions\SearchSteps.java
-C:\DESENVOLVIMENTO\JAVA\INTELLIJ_IDEA\ProjetoTesteDeSistemasETA2020.1\src\main\java\system\runner\Runner.java
+C:\DESENVOLVIMENTO\JAVA\INTELLIJ_IDEA\ProjetoTesteDeSistemasETA2020.1\src\main\java\system\pages\NaoRealizarLoginPage.java
+C:\DESENVOLVIMENTO\JAVA\INTELLIJ_IDEA\ProjetoTesteDeSistemasETA2020.1\src\main\java\system\stepDefinitions\ValidarCamposObrigatoriosSteps.java
+C:\DESENVOLVIMENTO\JAVA\INTELLIJ_IDEA\ProjetoTesteDeSistemasETA2020.1\src\main\java\system\pages\ValidacaoCamposObrigatoriosPage.java
 C:\DESENVOLVIMENTO\JAVA\INTELLIJ_IDEA\ProjetoTesteDeSistemasETA2020.1\src\main\java\system\helpers\DriverManager.java
 C:\DESENVOLVIMENTO\JAVA\INTELLIJ_IDEA\ProjetoTesteDeSistemasETA2020.1\src\main\java\system\stepDefinitions\Hooks.java
-C:\DESENVOLVIMENTO\JAVA\INTELLIJ_IDEA\ProjetoTesteDeSistemasETA2020.1\src\main\java\system\helpers\AccessAplication.java
+C:\DESENVOLVIMENTO\JAVA\INTELLIJ_IDEA\ProjetoTesteDeSistemasETA2020.1\src\main\java\system\stepDefinitions\NaoRealizarLoginSteps.java
+C:\DESENVOLVIMENTO\JAVA\INTELLIJ_IDEA\ProjetoTesteDeSistemasETA2020.1\src\main\java\system\stepDefinitions\SearchSteps.java
+C:\DESENVOLVIMENTO\JAVA\INTELLIJ_IDEA\ProjetoTesteDeSistemasETA2020.1\src\main\java\system\pages\EnviarFeedbackPage.java
+C:\DESENVOLVIMENTO\JAVA\INTELLIJ_IDEA\ProjetoTesteDeSistemasETA2020.1\src\main\java\system\helpers\AccessNike.java
+C:\DESENVOLVIMENTO\JAVA\INTELLIJ_IDEA\ProjetoTesteDeSistemasETA2020.1\src\main\java\system\runner\Runner.java
 C:\DESENVOLVIMENTO\JAVA\INTELLIJ_IDEA\ProjetoTesteDeSistemasETA2020.1\src\main\java\system\pages\SearchPage.java
+C:\DESENVOLVIMENTO\JAVA\INTELLIJ_IDEA\ProjetoTesteDeSistemasETA2020.1\src\main\java\system\stepDefinitions\EnviarFeedbackSteps.java
 C:\DESENVOLVIMENTO\JAVA\INTELLIJ_IDEA\ProjetoTesteDeSistemasETA2020.1\src\main\java\system\helpers\Constants.java
