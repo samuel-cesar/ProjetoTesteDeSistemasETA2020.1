@@ -23,7 +23,7 @@ public class SearchSteps {
     }
 
     @Then("o sistema deve exibir que o resultado da consulta foi:")
-    public void oSistemaDeveExibirQueOResultadoDaConsultaFoi(DataTable result) {
+    public void oSistemaDeveExibirQueOResultadoDaConsultaFoi(DataTable result) throws InterruptedException {
         assertEquals(result.cell(0, 0), searchPage.verificacaoNikePhantomGTAcademy3DMG());
     }
 }

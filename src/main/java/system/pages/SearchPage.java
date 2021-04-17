@@ -27,11 +27,10 @@ public class SearchPage {
         dsl.escreverApertarEnter("VisualSearchInput", shoes);
     }
 
-    public String verificacaoNikePhantomGTAcademy3DMG() {
-
+    public String verificacaoNikePhantomGTAcademy3DMG() throws InterruptedException {
+        Thread.sleep(3000);
         By nikePhantom3DMG = By.xpath("//span[contains(text(),'Nike Phantom GT Academy 3D MG')]");
         getDriverWait().until(ExpectedConditions.visibilityOfElementLocated(nikePhantom3DMG));
-//        return getDriver().findElement(nikePhantom3DMG).getText();
         return dsl.obterTexto(nikePhantom3DMG);
     }
 }

@@ -30,9 +30,12 @@ public class DSL {
         getDriver().findElement(by).sendKeys(texto + Keys.ENTER);
     }
 
-
     public void escreverId(String id_campo, String texto) {
         escrever(By.id(id_campo), texto);
+    }
+
+    public void escreverName(String name_campo, String texto) {
+        escrever(By.name(name_campo), texto);
     }
 
     public void escreverXpath(String xpath_campo, String texto) {

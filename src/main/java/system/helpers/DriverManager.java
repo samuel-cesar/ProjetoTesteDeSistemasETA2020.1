@@ -8,7 +8,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class DriverManager {
 
     private static WebDriver driver;
-    private static WebDriverWait driverWait;
 
     public DriverManager() {
     }
@@ -21,10 +20,8 @@ public class DriverManager {
     }
 
     public static WebDriverWait getDriverWait() {
-        if (driverWait == null) {
-            driverWait = new WebDriverWait(driver, 10);
-        }
-        return driverWait;
+        WebDriverWait driverWait;
+        return driverWait = new WebDriverWait(driver, 20);
     }
 
     public static void endSession() {

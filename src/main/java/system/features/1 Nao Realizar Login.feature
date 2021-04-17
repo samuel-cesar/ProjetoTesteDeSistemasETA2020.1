@@ -1,8 +1,8 @@
-@NaoDeveRealizarLoginDeveSerExecutadoIsoladamente @E2E @Automated
+@NaoDeveRealizarLogin @E2E
 Feature: Usuário não deve realizar login
 
-  Como usuário robô
-  o sistema não deve permitir realizar login.
+  O sistema não deve permitir realizar login
+  através de software automatizado
   e deve exibir uma mensagem de bloqueio.
 
   Scenario: Usuário não deve realizar login
@@ -11,8 +11,8 @@ Feature: Usuário não deve realizar login
     And o usuario preenche o campo Password com "Pa$$w0rd!"
     When o usuario clica no botao SIGN IN
     Then o sistema deve exibir as seguintes mensagens:
-      | An error occurred.                                                         |
+      | AN ERROR OCCURRED.                                                         |
       | We are unable to connect to our servers right now. Please try again later. |
-      | GENERIC "0 - POST request to https://unite.nike.com/login blocked          |
+      | GENERIC "0 - POST request to https://unite.nike.com/login blocked"         |
 
 
