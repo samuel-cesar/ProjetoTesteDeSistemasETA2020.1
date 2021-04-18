@@ -5,8 +5,8 @@ Feature: Usuário não deve realizar login
   através de software automatizado
   e deve exibir uma mensagem de bloqueio.
 
-  Obs: Este teste precisa ser executado primeiro, caso contrário,
-  o sistema realiza login de forma automatizada.
+#  Este teste precisa ser executado em um sessão isolada,
+#  caso contrário, o sistema realiza login de forma automatizada.
 
   Scenario: Usuário não deve realizar login
     Given o usuario acessa a pagina de login

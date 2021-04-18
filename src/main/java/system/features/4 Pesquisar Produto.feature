@@ -7,6 +7,6 @@ Feature: Realizar Pesquisa
 
   Scenario: Realizar pesquisa através do campo Search
     Given o usuario clica na lupa de pesquisa
-    When o usuario digita "Nike Phantom GT Academy 3D MG" no campo de pesquisa e aperta a tecla enter
+    When o usuario digita "Nike Air VaporMax 2020 FK" no campo de pesquisa e aperta a tecla enter
     Then o sistema deve exibir que o resultado da consulta foi:
-      | Nike Phantom GT Academy 3D MG |
+      | Nike Air VaporMax 2020 FK |

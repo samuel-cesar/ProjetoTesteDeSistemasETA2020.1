@@ -27,10 +27,17 @@ public class SearchPage {
         dsl.escreverApertarEnter("VisualSearchInput", shoes);
     }
 
-    public String verificacaoNikePhantomGTAcademy3DMG() throws InterruptedException {
+//    public String verificacaoNikePhantomGTAcademy3DMG() throws InterruptedException {
+//        Thread.sleep(3000);
+//        By nikePhantom3DMG = By.xpath("//span[contains(text(),'Nike Phantom GT Academy 3D MG')]");
+//        getDriverWait().until(ExpectedConditions.visibilityOfElementLocated(nikePhantom3DMG));
+//        return dsl.obterTexto(nikePhantom3DMG);
+//    }
+
+    public String verificacaoNikeAirVaporMaxEvo() throws InterruptedException {
         Thread.sleep(3000);
-        By nikePhantom3DMG = By.xpath("//span[contains(text(),'Nike Phantom GT Academy 3D MG')]");
-        getDriverWait().until(ExpectedConditions.visibilityOfElementLocated(nikePhantom3DMG));
-        return dsl.obterTexto(nikePhantom3DMG);
+        By nikeAirVaporMaxEvo = By.xpath("//span[contains(text(),'Nike Air VaporMax 2020 FK')]");
+        getDriverWait().until(ExpectedConditions.visibilityOfElementLocated(nikeAirVaporMaxEvo));
+        return dsl.obterTexto(nikeAirVaporMaxEvo);
     }
 }
