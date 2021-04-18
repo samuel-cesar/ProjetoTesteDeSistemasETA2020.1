@@ -1,4 +1,4 @@
-@NaoDeveRealizarLogin @E2E
+@NaoDeveRealizarLogin @E2E @Automated @SystemTest
 Feature: Usuário não deve realizar login
 
   O sistema não deve permitir realizar login

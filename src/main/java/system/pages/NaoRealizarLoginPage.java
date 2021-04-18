@@ -28,28 +28,22 @@ public class NaoRealizarLoginPage {
     }
 
     public String msgError() {
-
         By errorOccurred = By.xpath("//*[contains(text(),'An error occurred.')]");
         DriverManager.getDriverWait().until(ExpectedConditions.visibilityOfElementLocated(errorOccurred));
         getDriver().findElement(errorOccurred).click();
-
         return dsl.obterTextoXPath("//*[contains(text(),'An error occurred.')]");
     }
 
     public String msgTryAgain() {
-
         By msgTryAgain = By.xpath("//*[contains(text(),'We are unable to connect to our servers right now. Please try again later.')] ");
         DriverManager.getDriverWait().until(ExpectedConditions.visibilityOfElementLocated(msgTryAgain));
-
         return dsl.obterTextoXPath("//*[contains(text(),'We are unable to connect to our servers right now. Please try again later.')] ");
 
     }
 
     public String msgLoginBlocked() {
-
         By msgLoginBlocked = By.xpath("//*[contains(text(),'GENERIC \"0 - POST request to https://unite.nike.com/login blocked\"')] ");
         DriverManager.getDriverWait().until(ExpectedConditions.visibilityOfElementLocated(msgLoginBlocked));
-
         return dsl.obterTextoXPath("//*[contains(text(),'GENERIC \"0 - POST request to https://unite.nike.com/login blocked\"')] ");
     }
 }

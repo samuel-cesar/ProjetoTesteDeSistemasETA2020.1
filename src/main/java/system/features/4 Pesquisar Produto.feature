@@ -1,4 +1,4 @@
-@Search @E2E @Automated
+@Search @E2E @Automated @SystemTest
 Feature: Realizar Pesquisa
 
   Como um usuário do sistema

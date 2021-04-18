@@ -1,4 +1,4 @@
-@ValidacaoCamposObrigatorios @E2E @Automated
+@ValidacaoCamposObrigatorios @E2E @Automated @SystemTest
 Feature: Validar campos obrigatorios
 
   Como um usuário

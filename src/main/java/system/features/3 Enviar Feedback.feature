@@ -1,4 +1,4 @@
-@EnviarFeedback @E2E @Automated
+@EnviarFeedback @E2E @Automated @SystemTest
 Feature: EnviarFeddback
 
   Como um usuário

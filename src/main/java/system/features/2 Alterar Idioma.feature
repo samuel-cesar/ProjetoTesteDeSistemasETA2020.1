@@ -1,4 +1,4 @@
-@AlterarIdioma @E2E @Automated
+@AlterarIdioma @E2E @Automated @SystemTest
 Feature: Alterar Idioma
 
   Como um usuário

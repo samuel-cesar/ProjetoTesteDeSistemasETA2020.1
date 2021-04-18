@@ -5,12 +5,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.jupiter.api.Assertions;
-import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import system.helpers.DriverManager;
 import system.pages.NaoRealizarLoginPage;
-
-import static system.helpers.DriverManager.getDriver;
 
 public class NaoRealizarLoginSteps {
 

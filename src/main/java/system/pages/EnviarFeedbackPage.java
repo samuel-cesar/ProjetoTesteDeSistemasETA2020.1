@@ -2,10 +2,8 @@ package system.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 import system.helpers.DSL;
 
-import static system.helpers.DriverManager.getDriver;
 import static system.helpers.DriverManager.getDriverWait;
 
 public class EnviarFeedbackPage {
@@ -37,7 +35,7 @@ public class EnviarFeedbackPage {
     public String verificacaoThankyou() {
         By thankyou = By.xpath("//b[contains(text(),'Thank you')]");
         getDriverWait().until(ExpectedConditions.visibilityOfElementLocated(thankyou));
-        return getDriver().findElement(thankyou).getText();
+        return dsl.obterTextoXPath("//b[contains(text(),'Thank you')]");
 
     }
 }
