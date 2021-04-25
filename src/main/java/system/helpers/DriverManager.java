@@ -2,8 +2,11 @@ package system.helpers;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import static system.helpers.Constants.CHROME_DRIVER_PATH;
+import static system.helpers.Constants.FIREFOX_DRIVER_PATH;
 
 public class DriverManager {
 
@@ -14,6 +17,7 @@ public class DriverManager {
 
     public static WebDriver getDriver() {
         if (driver == null) {
+            System.setProperty("webdriver.chrome.driver", CHROME_DRIVER_PATH);
             driver = new ChromeDriver();
         }
         return driver;
