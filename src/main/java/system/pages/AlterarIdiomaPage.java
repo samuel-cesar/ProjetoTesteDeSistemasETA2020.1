@@ -15,7 +15,7 @@ public class AlterarIdiomaPage {
     }
 
     public void clicarNoLabelDoIdioma() throws InterruptedException {
-        Thread.sleep(2000);
+        Thread.sleep(4000);
         By labelIdioma = By.xpath("//span[@class='country-pin-label']");
         getDriverWait().until(ExpectedConditions.visibilityOfElementLocated(labelIdioma));
         dsl.clicarLabelIdioma("//span[@class='country-pin-label']");

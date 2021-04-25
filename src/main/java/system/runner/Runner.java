@@ -11,7 +11,7 @@ import org.junit.runner.RunWith;
         tags = "@E2E",
         glue = "system/stepDefinitions",
         dryRun = false,
-        plugin = "pretty",
+        plugin = {"pretty", "html:src/report/ReportCucumberHtml"},
         snippets = CucumberOptions.SnippetType.CAMELCASE,
         publish = true
 )
