@@ -11,6 +11,7 @@ import static system.helpers.Constants.FIREFOX_DRIVER_PATH;
 public class DriverManager {
 
     private static WebDriver driver;
+    private static WebDriverWait driverWait;
 
     public DriverManager() {
     }
@@ -24,7 +25,6 @@ public class DriverManager {
     }
 
     public static WebDriverWait getDriverWait() {
-        WebDriverWait driverWait;
         return driverWait = new WebDriverWait(driver, 20);
     }
 

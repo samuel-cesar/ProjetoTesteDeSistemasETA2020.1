@@ -23,8 +23,6 @@ public class NaoRealizarLoginSteps {
 
     @When("o usuario clica no botao SIGN IN")
     public void oUsuarioClicaNoBotaoSIGNIN() {
-        //getDriver().findElement(By.xpath("//input[@value='SIGN IN']")).click();
-
         naoRealizarLoginPage.clicarBotaoSIGNIN();
 
     }
