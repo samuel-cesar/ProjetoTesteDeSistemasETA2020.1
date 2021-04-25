@@ -11,12 +11,12 @@ public class AlterarIdiomaSteps {
     AlterarIdiomaPage alterarIdiomaPage = new AlterarIdiomaPage();
 
     @Given("o usuario clica no label para selecionar a linguagem")
-    public void o_usuario_clica_no_label_para_selecionar_a_linguagem() {
+    public void o_usuario_clica_no_label_para_selecionar_a_linguagem() throws InterruptedException {
         alterarIdiomaPage.clicarNoLabelDoIdioma();
     }
 
     @When("o usuario clica no pais {string}")
-    public void o_usuario_clica_no_pais(String country) {
+    public void o_usuario_clica_no_pais(String country) throws InterruptedException {
 
         if (country.equals("Brasil")) {
             alterarIdiomaPage.clicarBrasil(country);

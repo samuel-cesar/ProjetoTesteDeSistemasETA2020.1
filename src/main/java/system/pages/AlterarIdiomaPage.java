@@ -14,17 +14,22 @@ public class AlterarIdiomaPage {
         dsl = new DSL();
     }
 
-    public void clicarNoLabelDoIdioma() {
+    public void clicarNoLabelDoIdioma() throws InterruptedException {
+        Thread.sleep(2000);
+        By labelIdioma = By.xpath("//span[@class='country-pin-label']");
+        getDriverWait().until(ExpectedConditions.visibilityOfElementLocated(labelIdioma));
         dsl.clicarLabelIdioma("//span[@class='country-pin-label']");
     }
 
-    public void clicarBrasil(String country) {
+    public void clicarBrasil(String country) throws InterruptedException {
+        Thread.sleep(2000);
         By elementCountry = By.xpath("//p[@class='nav-bold'][contains(text(),'" + country + "')]");
         getDriverWait().until(ExpectedConditions.visibilityOfElementLocated(elementCountry));
         dsl.clicarPais("//p[@class='nav-bold'][contains(text(),'" + country + "')]");
     }
 
-    public void clicarMexico(String country) {
+    public void clicarMexico(String country) throws InterruptedException {
+        Thread.sleep(2000);
         By elementCountry = By.xpath("//p[contains(text(),'" + country + "')]");
         getDriverWait().until(ExpectedConditions.visibilityOfElementLocated(elementCountry));
         dsl.clicarPais("//p[contains(text(),'" + country + "')]");

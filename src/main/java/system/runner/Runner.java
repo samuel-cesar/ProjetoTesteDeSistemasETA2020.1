@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/main/java/system/features",
         monochrome = false,
-        tags = "@ValidacaoCamposObrigatorios",
+        tags = "@E2E",
         glue = "system/stepDefinitions",
         dryRun = false,
         plugin = "pretty",
