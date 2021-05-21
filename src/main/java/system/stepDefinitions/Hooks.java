@@ -1,8 +1,6 @@
 package system.stepDefinitions;
 
-import io.cucumber.core.gherkin.Step;
 import io.cucumber.java.After;
-import io.cucumber.java.AfterStep;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import org.apache.commons.io.FileUtils;
@@ -12,7 +10,7 @@ import org.openqa.selenium.TakesScreenshot;
 import java.io.File;
 import java.io.IOException;
 
-import static system.helpers.AccessNike.accessNikeUSA;
+import static system.helpers.SelectWebPage.accessNikeUSA;
 import static system.helpers.DriverManager.*;
 import static system.helpers.DriverManager.getDriver;
 

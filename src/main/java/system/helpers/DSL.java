@@ -10,7 +10,14 @@ import java.util.List;
 
 import static system.helpers.DriverManager.*;
 
+//Domain Specific Language (DSL)
 public class DSL {
+
+    /* A Domain Specific Language (DSL)
+    Esta linguagem abstrai completamente os conceitos de campos de entrada, botões, cliques e etc.
+    Usando essa abordagem, tudo que um testador precisa fazer é chamar os métodos da DSL.
+    Isso lhe dá uma vantagem de manutenção: se os campos de login mudassem, você só teria que mudar este método - não seus testes.
+    https://www.selenium.dev/documentation/en/guidelines_and_recommendations/domain_specific_language/ */
 
     /********* Acessar Página - Get ************/
 
