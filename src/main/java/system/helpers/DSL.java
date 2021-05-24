@@ -187,10 +187,12 @@ public class DSL {
     }
 
     public void clicarLabelIdioma(String labelIdioma) {
+        getDriverWait().until(ExpectedConditions.elementToBeClickable(By.xpath(labelIdioma)));
         getDriver().findElement(By.xpath(labelIdioma)).click();
     }
 
     public void clicarPais(String elementCountry) {
+        getDriverWait().until(ExpectedConditions.elementToBeClickable(By.xpath(elementCountry)));
         getDriver().findElement(By.xpath(elementCountry)).click();
     }
 

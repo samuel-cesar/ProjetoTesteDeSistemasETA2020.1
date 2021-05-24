@@ -11,25 +11,24 @@ public class AlterarIdiomaSteps {
     AlterarIdiomaPage alterarIdiomaPage = new AlterarIdiomaPage();
 
     @Given("o usuario clica no label para selecionar a linguagem")
-    public void o_usuario_clica_no_label_para_selecionar_a_linguagem() throws InterruptedException {
+    public void o_usuario_clica_no_label_para_selecionar_a_linguagem(){
         alterarIdiomaPage.clicarNoLabelDoIdioma();
     }
 
     @When("o usuario clica no pais {string}")
-    public void o_usuario_clica_no_pais(String country) throws InterruptedException {
+    public void o_usuario_clica_no_pais(String country){
 
         if (country.equals("Brasil")) {
-            alterarIdiomaPage.clicarBrasil(country);
+            alterarIdiomaPage.clicarBrasil();
         }
 
         if (country.equals("México")) {
-            alterarIdiomaPage.clicarMexico(country);
+            alterarIdiomaPage.clicarMexico();
         }
     }
 
     @Then("o sistema deve exibir o endereco {string}")
-    public void o_sistema_deve_exibir_o_endereco(String string) throws InterruptedException {
-        Thread.sleep(2000);
+    public void o_sistema_deve_exibir_o_endereco(String string){
         Assertions.assertEquals(alterarIdiomaPage.verificarUrl(), string);
     }
 

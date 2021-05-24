@@ -10,29 +10,26 @@ public class AlterarIdiomaPage {
 
     private DSL dsl;
 
+    private String labelIdiomaXPath = "//span[@class='country-pin-label']";
+    private String obterTextoXPathSobreANike = "//h1[contains(text(),'SOBRE A NIKE')]";
+    private String obterTextoXpathAcercaDeNike = "//a[contains(text(),'ACERCA DE NIKE')]";
+    private String countryBrasilXPath = "//p[@class='nav-bold'][contains(text(),'Brasil')]";
+    private String countryMexicoXPath = "//p[@class='nav-bold'][contains(text(),'México')]";
+
     public AlterarIdiomaPage() {
         dsl = new DSL();
     }
 
-    public void clicarNoLabelDoIdioma() throws InterruptedException {
-        Thread.sleep(4000);
-        By labelIdioma = By.xpath("//span[@class='country-pin-label']");
-        getDriverWait().until(ExpectedConditions.visibilityOfElementLocated(labelIdioma));
-        dsl.clicarLabelIdioma("//span[@class='country-pin-label']");
+    public void clicarNoLabelDoIdioma(){
+        dsl.clicarLabelIdioma(labelIdiomaXPath);
     }
 
-    public void clicarBrasil(String country) throws InterruptedException {
-        Thread.sleep(2000);
-        By elementCountry = By.xpath("//p[@class='nav-bold'][contains(text(),'" + country + "')]");
-        getDriverWait().until(ExpectedConditions.visibilityOfElementLocated(elementCountry));
-        dsl.clicarPais("//p[@class='nav-bold'][contains(text(),'" + country + "')]");
+    public void clicarBrasil(){
+        dsl.clicarPais(countryBrasilXPath);
     }
 
-    public void clicarMexico(String country) throws InterruptedException {
-        Thread.sleep(2000);
-        By elementCountry = By.xpath("//p[contains(text(),'" + country + "')]");
-        getDriverWait().until(ExpectedConditions.visibilityOfElementLocated(elementCountry));
-        dsl.clicarPais("//p[contains(text(),'" + country + "')]");
+    public void clicarMexico(){
+        dsl.clicarPais(countryMexicoXPath);
     }
 
     public String verificarUrl() {
@@ -40,10 +37,10 @@ public class AlterarIdiomaPage {
     }
 
     public String verificarSobreANike() {
-        return dsl.obterTextoXPath("//h1[contains(text(),'SOBRE A NIKE')]");
+        return dsl.obterTextoXPath(obterTextoXPathSobreANike);
     }
 
     public String verificarAcercaDeNike() {
-        return dsl.obterTextoXPath("//a[contains(text(),'ACERCA DE NIKE')]");
+        return dsl.obterTextoXPath(obterTextoXpathAcercaDeNike);
     }
 }
