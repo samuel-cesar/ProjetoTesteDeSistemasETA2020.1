@@ -49,12 +49,20 @@ public class DSL {
         escrever(By.xpath(xpath_campo), texto);
     }
 
+    public void escreverCss(String css_campo, String texto) {
+        escrever(By.cssSelector(css_campo), texto);
+    }
+
     public void escreverApertarEnter(String id_campo, String texto) {
         escreverEApertarEnter(By.id(id_campo), texto);
     }
 
     public String obterValorCampo(String id_campo) {
         return getDriver().findElement(By.id(id_campo)).getAttribute("value");
+    }
+
+    public String obterValorCampoXPath(String xpath_campo) {
+        return getDriver().findElement(By.xpath(xpath_campo)).getAttribute("value");
     }
 
     /********* Radio e Check ************/
@@ -185,5 +193,25 @@ public class DSL {
 
     public String verificarUrl() {
         return getDriver().getCurrentUrl();
+    }
+
+    public void apertarATeclaEnter(String searchInput) {
+        getDriver().findElement(By.cssSelector(searchInput)).sendKeys(Keys.ENTER);
+    }
+
+    public void clicarProdutoAgasalho(String agasalhoXpath) {
+        getDriver().findElement(By.xpath(agasalhoXpath)).click();
+    }
+
+    public void selecionarTamanhoDoProdutoP(String tamanhoDoProdutoPXPath) {
+        getDriver().findElement(By.xpath(tamanhoDoProdutoPXPath)).click();
+    }
+
+    public void clicarBotaoComprarXpath(String clicarBotaoComprar) {
+        getDriver().findElement(By.xpath(clicarBotaoComprar)).click();
+    }
+
+    public void clicarBotaoMais(String clicarBotaoMaiQuantidadeXPath) {
+        getDriver().findElement(By.xpath(clicarBotaoMaiQuantidadeXPath)).click();
     }
 }

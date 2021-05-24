@@ -10,6 +10,7 @@ import org.openqa.selenium.TakesScreenshot;
 import java.io.File;
 import java.io.IOException;
 
+import static system.helpers.SelectWebPage.accessCentauroBR;
 import static system.helpers.SelectWebPage.accessNikeUSA;
 import static system.helpers.DriverManager.*;
 import static system.helpers.DriverManager.getDriver;
@@ -22,10 +23,13 @@ public class Hooks {
     @Before
     public void beforeScenario(Scenario scenario) {
         getDriver();
-        accessNikeUSA();
+        if(scenario.getName().equals("Adicionar produto ao carrinho") || scenario.getName().equals("Aumentar a quantidade do produto no carrinho")){
+            accessCentauroBR();
+        }else {
+            accessNikeUSA();
+        }
         getDriver().manage().window().maximize();
         nomeDoScenario = scenario;
-
     }
 
     @After
