@@ -1,8 +1,7 @@
 @CentauroCarrinho @E2E @Automated @SystemTest
-Feature: Adicionar produto ao carrinho
+Feature: Adicionar e aumentar um produto ao carrinho
 
   Scenario: Adicionar produto ao carrinho
-#    Given acessar a pagina da centauro "https://www.centauro.com.br/"
     Given o usuario preenche o campo de busca com "Agasalho Puma Techstripe Tricot Suit OP - Masculino"
     Then o usuario aperta a tecla Enter
     And clica no produto agasalho
@@ -11,7 +10,6 @@ Feature: Adicionar produto ao carrinho
     Then o sistema exibe o valor total da compra "R$ 289,90"
 
   Scenario: Aumentar a quantidade do produto no carrinho
-#    Given acessar a pagina da centauro "https://www.centauro.com.br/"
     Given o usuario preenche o campo de busca com "Agasalho Puma Techstripe Tricot Suit OP - Masculino"
     Then o usuario aperta a tecla Enter
     And clica no produto agasalho

@@ -13,15 +13,6 @@ public class CentauroCarrinhoSteps {
 
     CentauroCarrinhoPage centauroCarrinhoPage = new CentauroCarrinhoPage();
 
-    /*@Given("acessar a pagina da centauro {string}")
-    public void acessar_a_pagina_da_centauro(String site) {
-        getDriver();
-        getDriver().get(site);
-        getDriver().manage().window().maximize();
-        assertEquals("Centauro Loja de Esportes - Nike, Adidas, Mizuno, Asics, Oakley e mais! - Seu esporte, nossa paixão", getDriver().getTitle(), "Não encontrou o título");
-        assertEquals("https://www.centauro.com.br/", getDriver().getCurrentUrl(), "Não encontrou a url");
-    }*/
-
     @Given("o usuario preenche o campo de busca com {string}")
     public void o_usuario_preenche_o_campo_de_busca_com(String produto){
         centauroCarrinhoPage.preencherOCampoDeBusca(produto);

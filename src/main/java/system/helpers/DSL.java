@@ -3,6 +3,7 @@ package system.helpers;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 
 import java.util.ArrayList;
@@ -62,6 +63,7 @@ public class DSL {
     }
 
     public String obterValorCampoXPath(String xpath_campo) {
+        getDriverWait().until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath_campo)));
         return getDriver().findElement(By.xpath(xpath_campo)).getAttribute("value");
     }
 
@@ -94,6 +96,7 @@ public class DSL {
     }
 
     public String obterTextoXPath(String xpath) {
+        getDriverWait().until(ExpectedConditions.elementToBeClickable(By.xpath(xpath)));
         return obterTexto(By.xpath(xpath));
     }
 
@@ -200,10 +203,12 @@ public class DSL {
     }
 
     public void clicarProdutoAgasalho(String agasalhoXpath) {
+        getDriverWait().until(ExpectedConditions.elementToBeClickable(By.xpath(agasalhoXpath)));
         getDriver().findElement(By.xpath(agasalhoXpath)).click();
     }
 
     public void selecionarTamanhoDoProdutoP(String tamanhoDoProdutoPXPath) {
+        getDriverWait().until(ExpectedConditions.elementToBeClickable(By.xpath(tamanhoDoProdutoPXPath)));
         getDriver().findElement(By.xpath(tamanhoDoProdutoPXPath)).click();
     }
 
@@ -212,6 +217,7 @@ public class DSL {
     }
 
     public void clicarBotaoMais(String clicarBotaoMaiQuantidadeXPath) {
+        getDriverWait().until(ExpectedConditions.elementToBeClickable(By.xpath(clicarBotaoMaiQuantidadeXPath)));
         getDriver().findElement(By.xpath(clicarBotaoMaiQuantidadeXPath)).click();
     }
 }
