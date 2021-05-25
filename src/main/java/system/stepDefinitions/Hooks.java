@@ -37,7 +37,7 @@ public class Hooks {
 
         TakesScreenshot screenshot = (TakesScreenshot) getDriver();
         File source = screenshot.getScreenshotAs(OutputType.FILE);
-        FileUtils.copyFile(source, new File("C:\\DESENVOLVIMENTO\\JAVA\\INTELLIJ_IDEA\\ProjetoTesteDeSistemasETA2020.1\\src\\test\\screenshots\\"
+        FileUtils.copyFile(source, new File("src\\test\\screenshots\\"
                 + File.separator + nomeDoScenario.getName() + ".jpg"));
 
         endSession();
