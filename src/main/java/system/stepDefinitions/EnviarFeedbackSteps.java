@@ -15,9 +15,9 @@ public class EnviarFeedbackSteps {
         enviarFeedbackPage.clicarLabelSendUSFeedback();
     }
 
-    @Given("seleciona a opcao Something Else")
-    public void seleciona_a_opcao_something_else() {
-        enviarFeedbackPage.selecionarSomethingElse();
+    @Given("seleciona a opcao {string}")
+    public void seleciona_a_opcao(String someThingElse) {
+        enviarFeedbackPage.selecionarSomethingElse(someThingElse);
     }
 
     @When("o usuario escreve no campo de texto {string}")

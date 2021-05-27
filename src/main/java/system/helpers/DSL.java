@@ -117,6 +117,7 @@ public class DSL {
     }
 
     public void selecionarComboXpath(String xpath, String valor) {
+        getDriverWait().until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
         WebElement element = getDriver().findElement(By.xpath(xpath));
         Select combo = new Select(element);
         combo.selectByVisibleText(valor);
@@ -173,6 +174,7 @@ public class DSL {
     /********* Send US Feedback ************/
 
     public void clicarSendUSFeedBack(String xpath) {
+        getDriverWait().until(ExpectedConditions.elementToBeClickable(By.xpath(xpath)));
         getDriver().findElement(By.xpath(xpath)).click();
     }
 
