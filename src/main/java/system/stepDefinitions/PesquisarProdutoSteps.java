@@ -23,7 +23,7 @@ public class PesquisarProdutoSteps {
     }
 
     @Then("o sistema deve exibir que o resultado da consulta foi:")
-    public void oSistemaDeveExibirQueOResultadoDaConsultaFoi(DataTable result) throws InterruptedException {
+    public void oSistemaDeveExibirQueOResultadoDaConsultaFoi(DataTable result){
         assertEquals(result.cell(0, 0), pesquisarProdutoPage.verificacaoNikeAirVaporMaxEvo());
     }
 }

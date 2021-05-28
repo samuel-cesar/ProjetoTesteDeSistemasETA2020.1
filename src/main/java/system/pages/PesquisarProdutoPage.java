@@ -28,7 +28,7 @@ public class PesquisarProdutoPage {
         dsl.escreverApertarEnter(campoSearchId, shoes);
     }
 
-    public String verificacaoNikeAirVaporMaxEvo() throws InterruptedException {
+    public String verificacaoNikeAirVaporMaxEvo(){
         return dsl.obterTextoXPath(nikeAirVaporMaxEvoXPath);
     }
 }
