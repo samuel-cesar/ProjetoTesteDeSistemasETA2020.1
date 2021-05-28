@@ -96,7 +96,7 @@ public class DSL {
     }
 
     public String obterTextoXPath(String xpath) {
-        getDriverWait().until(ExpectedConditions.elementToBeClickable(By.xpath(xpath)));
+        getDriverWait().until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
         return obterTexto(By.xpath(xpath));
     }
 
@@ -168,6 +168,7 @@ public class DSL {
     /********* Campo Search ************/
 
     public void clicarNoCampoSearch(String id) {
+        getDriverWait().until(ExpectedConditions.elementToBeClickable(By.id(id)));
         getDriver().findElement(By.id(id)).click();
     }
 

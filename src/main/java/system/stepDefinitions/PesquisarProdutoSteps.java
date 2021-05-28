@@ -4,27 +4,26 @@ import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import system.pages.SearchPage;
+import system.pages.PesquisarProdutoPage;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class SearchSteps {
+public class PesquisarProdutoSteps {
 
-    SearchPage searchPage = new SearchPage();
+    PesquisarProdutoPage pesquisarProdutoPage = new PesquisarProdutoPage();
 
     @Given("o usuario clica na lupa de pesquisa")
     public void oUsuarioClicaNaLupaDePesquisa() {
-        searchPage.clicarCampoSearch();
+        pesquisarProdutoPage.clicarCampoSearch();
     }
 
     @When("o usuario digita {string} no campo de pesquisa e aperta a tecla enter")
     public void oUsuarioDigitaNoCampoDePesquisaEApertaATeclaEnter(String shoes) {
-        searchPage.escreverNoCampoSearch(shoes);
+        pesquisarProdutoPage.escreverNoCampoSearch(shoes);
     }
 
     @Then("o sistema deve exibir que o resultado da consulta foi:")
     public void oSistemaDeveExibirQueOResultadoDaConsultaFoi(DataTable result) throws InterruptedException {
-        //assertEquals(result.cell(0, 0), searchPage.verificacaoNikePhantomGTAcademy3DMG());
-        assertEquals(result.cell(0, 0), searchPage.verificacaoNikeAirVaporMaxEvo());
+        assertEquals(result.cell(0, 0), pesquisarProdutoPage.verificacaoNikeAirVaporMaxEvo());
     }
 }
