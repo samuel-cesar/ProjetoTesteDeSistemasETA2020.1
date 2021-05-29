@@ -19,7 +19,6 @@ public class Hooks {
 
     private Scenario nomeDoScenario;
 
-
     @Before
     public void beforeScenario(Scenario scenario) {
         getDriver();
