@@ -1,5 +1,5 @@
 @CentauroCarrinho @E2E @Automated @SystemTest
-Feature: Adicionar e aumentar um produto ao carrinho
+Feature: Adicionar e aumentar a quantidade de um produto no carrinho
 
   Como um usuário que deseja comprar um produto
   quando eu adicionar um produto ao carrinho,
